@@ -5,10 +5,7 @@ import os
 import requests
 import bz2
 
-
-file = '/Users/kushaljirawla/Desktop/Movie/movies_dict.pkl'
-
-movie_list = pickle.load(open(file, 'rb'))
+movie_list = pickle.load(open('movies_dict.pkl', 'rb'))
 moviesd = pd.DataFrame(movie_list)
 movies = moviesd['title'].values
 
