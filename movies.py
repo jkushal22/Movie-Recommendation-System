@@ -13,6 +13,7 @@ moviesd = pd.DataFrame(movie_list)
 movies = moviesd['title'].values
 
 similarity = bz2.BZ2File('similarity', 'rb')
+similarity = pickle.load(similarity)
 
 def fetchposter(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=1e3b8dc76ab2d0a1747a5d918031a040&language=en-US".format(movie_id)
